@@ -71,7 +71,7 @@ def parseArguments(input: Optional[List[str]] = None) -> Dict[str, Any]:
     )
 
     # Optional arguments
-    compilerChoices = ["amdclang++", "hipcc"] if os.name != "nt" else ["clang++", "hipcc"]
+    compilerChoices = ["hipcc", "amdclang++"] if os.name != "nt" else ["clang++", "hipcc"]
     parser.add_argument(
         "--cxx-compiler",
         dest="CxxCompiler",
