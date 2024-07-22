@@ -2440,9 +2440,6 @@ def assignGlobalParameters( config ):
 
   except (subprocess.CalledProcessError, OSError) as e:
       printWarning("Error: {} running {} {} ".format('hipcc', '--version',  e))
-
-  if "IgnoreAsmCapCache" in config:
-    globalParameters["IgnoreAsmCapCache"] = config["IgnoreAsmCapCache"]
     
   globalParameters["AsmCaps"] = {}
   globalParameters["ArchCaps"] = {}
