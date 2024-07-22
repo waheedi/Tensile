@@ -225,8 +225,8 @@ def buildSourceCodeObjectFile(CxxCompiler, outputPath, kernelFile):
     (_, filename) = os.path.split(kernelFile)
     (base, _) = os.path.splitext(filename)
 
-    if "CmakeCxxCompiler" in globalParameters and globalParameters["CmakeCxxCompiler"] is not None:
-        os.environ["CMAKE_CXX_COMPILER"] = globalParameters["CmakeCxxCompiler"]
+#    if "CmakeCxxCompiler" in globalParameters and globalParameters["CmakeCxxCompiler"] is not None:
+#        os.environ["CMAKE_CXX_COMPILER"] = globalParameters["CmakeCxxCompiler"]
 
     objectFilename = base + ".o"
     soFilename = base + ".so"
@@ -280,7 +280,7 @@ def buildSourceCodeObjectFile(CxxCompiler, outputPath, kernelFile):
                 + archFlags
                 + [kernelFile, "-c", "-o", os.path.join(buildPath, objectFilename)]
             )
-        print(f"printing our args as we have a None Type error at the moment {compileArgs} launcher: {launcher} hipFlags: {hipFlags}  archFlags: {archFlags} ")
+        print(f"printing our args as we have a None Type error at the moment {compileArgs} launcher: {launcher} hipFlags: {hipFlags} which(CxxCompiler) : {which(CxxCompiler)}  archFlags: {archFlags} ")
         tPrint(2, "hipcc:" + " ".join(compileArgs))
         # change to use  check_output to force windows cmd block util command finish
         try:
