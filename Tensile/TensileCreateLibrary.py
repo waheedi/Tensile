@@ -280,7 +280,7 @@ def buildSourceCodeObjectFile(CxxCompiler, outputPath, kernelFile):
                 + archFlags
                 + [kernelFile, "-c", "-o", os.path.join(buildPath, objectFilename)]
             )
-        pirnt(f"printing our args as we have a None Type error at the moment {compileArgs} launcher: {launcher} hipFlags: {hipFlags}  archFlags: {archFlags} ")
+        print(f"printing our args as we have a None Type error at the moment {compileArgs} launcher: {launcher} hipFlags: {hipFlags}  archFlags: {archFlags} ")
         tPrint(2, "hipcc:" + " ".join(compileArgs))
         # change to use  check_output to force windows cmd block util command finish
         try:
