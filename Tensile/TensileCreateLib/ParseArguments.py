@@ -289,8 +289,9 @@ def parseArguments(input: Optional[List[str]] = None) -> Dict[str, Any]:
         "WriteMasterSolutionIndex": args.WriteMasterSolutionIndex,
     }
 
-    if args.CmakeCxxCompiler:
-        os.environ["CMAKE_CXX_COMPILER"] = args.CmakeCxxCompiler
+    if os.environ["CMAKE_CXX_COMPILER"]:
+        print(f"CmakeCXXCompiler is: {args.CmakeCxxCompiler} im not using it anyway")
+        args.CmakeCxxCompiler = os.environ["CMAKE_CXX_COMPILER"]
     if args.NoEnumerate:
         arguments["ROCmAgentEnumeratorPath"] = False
     if args.GenerateSourcesAndExit:
