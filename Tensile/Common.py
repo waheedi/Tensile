@@ -305,7 +305,7 @@ globalParameters["SeparateArchitectures"] = False # write Tensile library metada
 
 globalParameters["LazyLibraryLoading"] = False # Load library and code object files when needed instead of at startup
 
-globalParameters["IgnoreAsmCapCache"] = true # Ignore checking for discrepancies between derived and cached asm caps
+globalParameters["IgnoreAsmCapCache"] = True # Ignore checking for discrepancies between derived and cached asm caps
 
 globalParameters["ExperimentalLogicDir"] = "/experimental/"
 
