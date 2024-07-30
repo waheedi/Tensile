@@ -249,8 +249,9 @@ vega10LibraryLogic={'ArchitectureName': 'gfx900', 'DeviceNames': ['Device 6863',
 mi25LibraryLogic={'ArchitectureName': 'gfx900', 'DeviceNames': ['Device 6860'], 'ScheduleName': 'mi25'}
 r9nanoLibraryLogic={'ArchitectureName': 'gfx803', 'DeviceNames': ['Device 7300'], 'ScheduleName': 'r9nano'}
 hipLibraryLogic={'ArchitectureName': 'fallback', 'DeviceNames': ['Device 0000'], 'ScheduleName': 'hip'}
+navi10LibraryLogic={'ArchitectureName': 'gfx1010', 'DeviceNames': ['Device 731f'], 'ScheduleName': 'navi10'}
 
-libraryLogicMapper={'arcturus': arcturusLibraryLogic, 'vega20': vega20LibraryLogic, 'vega10': vega10LibraryLogic, 'mi25': mi25LibraryLogic, 'r9nano': r9nanoLibraryLogic, 'hip': hipLibraryLogic}
+libraryLogicMapper={'navi10': navi10LibraryLogic, 'arcturus': arcturusLibraryLogic, 'vega20': vega20LibraryLogic, 'vega10': vega10LibraryLogic, 'mi25': mi25LibraryLogic, 'r9nano': r9nanoLibraryLogic, 'hip': hipLibraryLogic}
 
 def getLibraryLogic(logicType):
     libraryLogic = libraryLogicMapper[logicType]
